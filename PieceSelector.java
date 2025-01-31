@@ -1,7 +1,7 @@
-package Root.Default;
 
-import Root.Enums.CornerPreference;
-import Root.Enums.Pieces;
+
+import Enums.CornerPreference;
+import Enums.Pieces;
 
 /**
  *
@@ -10,12 +10,12 @@ import Root.Enums.Pieces;
 public class PieceSelector
 {
     // Vertical, Horizontal, top left, top right, bottom left, bottom right, left T inter, right T inter, top T inter, bottom T inter, 4 way inter
-    private static String[] blank = {"","","","","","","","","","",""};
-    private static String[] fancy = {"│","─","┌","┐","└","┘","├","┤","┬","┴","┼"};
-    private static String[] fancy_heavy = {"","","","","","","","","","",""};
-    private static String[] curved = {"","","","","","","","","","",""};
+    private static String[] blank =             {"","","","","","","","","","",""};
+    private static String[] fancy =             {"│","─","┌","┐","└","┘","├","┤","┬","┴","┼"};
+    private static String[] fancy_heavy =       {"","","","","","","","","","",""};
+    private static String[] curved =            {"","","","","","","","","","",""};
     private static String[] fancy_double_line = {"","","","","","","","","","",""};
-    private static String[] basic = {"|","-","+","+","+","+","+","+","+","+","+"};
+    private static String[] basic =             {"|","-","+","+","+","+","+","+","+","+","+"};
     
     
     public static String getPiece(CornerPreference pref, Pieces piece)
@@ -46,11 +46,11 @@ public class PieceSelector
 //        }
         switch (pref)
         {
-            case FANCY:             return fancy            [pieceNumber];
-            case FANCY_HEAVY:       return fancy_heavy      [pieceNumber];
-            case CURVED:            return curved           [pieceNumber];
-            case FANCY_DOUBLE_LINE: return fancy_double_line[pieceNumber];
-            case BASIC:             return basic            [pieceNumber];
+            case FANCY:             return fancy             [pieceNumber];
+            case FANCY_HEAVY:       return fancy_heavy       [pieceNumber];
+            case CURVED:            return curved            [pieceNumber];
+            case FANCY_DOUBLE_LINE: return fancy_double_line [pieceNumber];
+            case BASIC:             return basic             [pieceNumber];
             
             default:                return blank[pieceNumber];
         }

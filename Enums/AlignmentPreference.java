@@ -1,4 +1,4 @@
-package Root.Enums;
+package Enums;
 
 /**
  *
